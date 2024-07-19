@@ -1,0 +1,16 @@
+/* src/components/ImageCard/ImageCard.module.css */
+.card {
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.card img {
+  width: 350px;
+  height: 200px;
+  display: block;
+  border-radius: 5px;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}

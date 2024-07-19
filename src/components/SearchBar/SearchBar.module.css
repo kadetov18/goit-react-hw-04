@@ -1,0 +1,33 @@
+.header {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.form {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+}
+
+.input {
+  width: 100%;
+  padding: 10px 10px 10px 35px; /* Збільшений лівий падінг для кнопки */
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.button {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 25px; /* Розмір кнопки */
+  height: 25px; /* Розмір кнопки */
+  background: url("path/to/search-icon.svg") no-repeat center center; /* Замініть на шлях до вашої іконки пошуку */
+  background-size: contain;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
