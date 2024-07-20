@@ -1,8 +1,8 @@
 import React from "react";
 import s from "./LoadMoreBtn.module.css";
 
-const LoadMoreBtn = ({ onClick }) => (
-  <button className={s.button} onClick={onClick}>
+const LoadMoreBtn = ({ onClick, loadMoreRef }) => (
+  <button className={s.btn} onClick={onClick} ref={loadMoreRef}>
     Load more
   </button>
 );
