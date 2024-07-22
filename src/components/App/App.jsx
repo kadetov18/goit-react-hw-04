@@ -6,6 +6,7 @@ import Loader from "../Loader/Loader";
 import ErrorMessage from "../ErrorMessage/ErrorMessage";
 import s from "./App.module.css";
 import axios from "axios";
+import LoadMoreBtn from "../LoadMoreBtn/LoadMoreBtn";
 
 const API_KEY = "coI5w_rajcJLvv4R6rcZHiNKF1-Ee1SzV-cv6sTvgGc";
 
@@ -70,17 +71,11 @@ const App = () => {
   return (
     <div className={s.app}>
       <Header onSearch={handleSearch} />
-      {error && <ErrorMessage />}
+      {error && <ErrorMessage error={error} />}
       {loading && <Loader />}
       <ImageGallery images={images} onImageClick={openModal} />
       {images.length > 0 && !loading && (
-        <button
-          className={s.loadMore}
-          onClick={loadMoreImages}
-          ref={loadMoreRef}
-        >
-          Load more
-        </button>
+        <LoadMoreBtn onClick={loadMoreImages} loadMoreRef={loadMoreRef} />
       )}
       {selectedImage && (
         <ImageModal image={selectedImage} onClose={closeModal} />
